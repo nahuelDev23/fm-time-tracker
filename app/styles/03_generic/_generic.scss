@@ -1,0 +1,30 @@
+@use '../01_settings/settings';
+
+@use '../02_tools/mixins';
+
+
+:root{
+  @include mixins.a-set(settings.$root-vars);
+}
+
+
+*,
+*:after,
+*:before{
+  padding: 0;
+  margin:0;
+  outline: 0px solid;
+  box-sizing: border-box;
+
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited{
+    outline: 0px solid;
+  }
+}
+
+body {
+  background-color: var(--color-a);
+}

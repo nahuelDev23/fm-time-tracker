@@ -1,0 +1,27 @@
+@use "../01_settings/settings";
+
+@mixin media-to-down($mq){
+  @media(max-width:$mq){
+    @content;
+  }
+}
+
+@mixin a-set-values($values){
+  @each $key,$val in $values{
+    #{$key}:$val;
+  }
+}
+
+@mixin a-set($values){
+  $values-base:map-get($values,'base');
+  
+  @include a-set-values($values-base);
+}
+
+@mixin base() {
+  @include media-to-down(settings.$break-tablet){
+    @content;
+  }
+}
+
+

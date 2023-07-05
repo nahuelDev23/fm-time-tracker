@@ -1,0 +1,44 @@
+
+@use '../01_settings/settings';
+@use '../02_tools/mixins';
+
+.c-user-box-category{
+  color:var(--white);
+  &__container{  
+    overflow: hidden;
+  border-radius: var(--border-radius);
+  }
+
+  &__header{
+    background-color:orange;
+    height: 48px;
+  }
+  
+  &__main-content{
+    display:flex;
+    flex-direction: column;
+    gap:.5rem;
+    position: relative;
+    bottom:1rem;
+    background-color: var(--color-b);
+    border-radius: var(--border-radius);
+    padding:var(--padding-box);
+
+
+
+    &-first-line{
+      
+      display: flex;
+      justify-content: space-between;
+      &-category{
+      @include mixins.a-set(settings.$text-size-c);
+      }
+    }
+    
+    &-second-line{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

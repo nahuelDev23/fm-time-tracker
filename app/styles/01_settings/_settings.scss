@@ -1,0 +1,46 @@
+$color-a:rgb(2,4,7);
+$color-b:#111a55;
+$color-c:#2542ff;
+$color-b-hover:#000;
+$white:#fff;
+$white-soft:rgba(255,255,255,.5);
+$border-radius:10px;
+$padding-box:1.5rem;
+
+$break-tablet : 610px;
+
+// list and category title.
+$text-size-a:(
+   base:(
+   font-size:1rem
+   ),
+   );
+
+// "report for" card user and
+// date card.
+
+$text-size-b: (
+  base: (
+   font-size:.7rem,
+  ),
+ );
+
+// name user
+$text-size-c:(
+  base:(
+   font-size:1.2rem
+  ),
+ );
+
+
+$root-vars:(
+ base:(
+--color-a: $color-a,
+--color-b:$color-b,
+--color-c: $color-c,
+--white:$white,
+--white-soft:$white-soft,
+--border-radius:$border-radius,
+--padding-box:$padding-box,
+ ),
+)

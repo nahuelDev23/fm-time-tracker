@@ -1,0 +1,52 @@
+@use '../01_settings/settings';
+@use '../02_tools/mixins.scss';
+
+.c-user-box-profile{
+  
+  background-color: var(--color-b);
+  border-radius:var(--border-radius);
+  width: 100%;
+
+  &__header{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    background-color: var(--color-c);
+    width: 100%;
+    padding:var(--padding-box);
+    border-radius: var(--border-radius);
+    &-image{
+      position:relative;
+      width:70px;
+      height:70px;
+      border:3px solid var(--white);
+      border-radius: 50%;
+    }
+
+    &-title{
+      @include mixins.a-set(settings.$text-size-b);
+      color:var(--white-soft);
+    }
+
+    &-username{
+      @include mixins.a-set(settings.$text-size-c);
+      color:var(--white);
+    }
+  }
+
+  &__menu{
+@include mixins.a-set(settings.$text-size-a);
+    padding: 0 var(--podding-box);
+     &-list{
+       list-style: none;
+       display: flex;
+    padding:1.5rem ;
+    color:var(--white-soft);
+    justify-content: space-between;
+
+     &-item.active {
+       color:var(--white);
+     }
+     }
+  }
+}
