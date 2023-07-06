@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 export const UserBoxProfileComponent = ({ onChangeFilter, activeFilter }: any) => {
+  console.log("re-re")
   return (
     <div className="c-user-box-profile">
       <div className="c-user-box-profile__container">
@@ -18,9 +19,9 @@ export const UserBoxProfileComponent = ({ onChangeFilter, activeFilter }: any) =
 
         <div className="c-user-box-profile__menu">
           <ul className="c-user-box-profile__menu-list">
-            <li onClick={() => onChangeFilter("daily")} className={`c-user-box-profile__menu-list-item ${activeFilter === "Daily" && 'active'}`}>Daily</li>
-            <li onClick={() => onChangeFilter("weekly")} className={`c-user-box-profile__menu-list-item ${activeFilter === "Weekly" && 'active'}`}>Weekly</li>
-            <li onClick={() => onChangeFilter("monthly")} className={`c-user-box-profile__menu-list-item ${activeFilter === "Monthly" && 'active'}`}>Monthly</li>
+            <li onClick={() => onChangeFilter("daily")} className={`c-user-box-profile__menu-list-item ${activeFilter === "daily" && 'active'}`}>Daily</li>
+            <li onClick={() => onChangeFilter("weekly")} className={`c-user-box-profile__menu-list-item ${activeFilter === "weekly" && 'active'}`}>Weekly</li>
+            <li onClick={() => onChangeFilter("monthly")} className={`c-user-box-profile__menu-list-item ${activeFilter === "monthly" && 'active'}`}>Monthly</li>
           </ul>
         </div>
       </div>

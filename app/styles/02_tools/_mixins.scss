@@ -6,6 +6,12 @@
   }
 }
 
+@mixin media-to-up($mq){
+  @media(min-width:$mq){
+    @content;
+  }
+}
+
 @mixin a-set-values($values){
   @each $key,$val in $values{
     #{$key}:$val;
@@ -14,14 +20,25 @@
 
 @mixin a-set($values){
   $values-base:map-get($values,'base');
+  $values-md:map-get($values,'md');
   
   @include a-set-values($values-base);
+
+  @include md {
+    @include a-set-values($values-md);
+  }
 }
 
+//0px to 610px
 @mixin base() {
   @include media-to-down(settings.$break-tablet){
     @content;
   }
 }
 
+@mixin md(){
+  @include media-to-up(settings.$break-tablet+1){
+    @content;
+  }
+}
 

@@ -23,6 +23,9 @@ $text-size-b: (
   base: (
    font-size:.7rem,
   ),
+  md:(
+  font-size:.5rem,
+  )
  );
 
 // name user
@@ -30,6 +33,9 @@ $text-size-c:(
   base:(
    font-size:1.2rem
   ),
+  md:(
+  //font-size:.5rem,
+  )
  );
 
 

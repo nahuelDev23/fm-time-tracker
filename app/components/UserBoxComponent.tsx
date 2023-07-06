@@ -6,7 +6,7 @@ import { useState } from "react"
 
 
 export const UserBoxComponent = () => {
-  const [filter, setFilter] = useState("Daily");
+  const [filter, setFilter] = useState("daily");
 
   const setActiveFilter = (filter: string) => {
     setFilter(filter);
@@ -18,14 +18,18 @@ export const UserBoxComponent = () => {
         <UserBoxProfileComponent
           onChangeFilter={setActiveFilter}
           activeFilter={filter} />
-        {
-          data?.map((activity, i): any => (
-            <UserBoxCategory
-              key={i}
-              data={activity}
-              activeFilter={filter} />
-          ))
-        }
+
+        <div className="c-user-box-category">
+
+          {
+            data?.map((activity, i): any => (
+              <UserBoxCategory
+                key={i}
+                data={activity}
+                activeFilter={filter} />
+            ))
+          }
+        </div>
       </div>
     </div>
 
